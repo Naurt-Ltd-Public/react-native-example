@@ -1,1 +1,1 @@
-# rwact-native-example
+# react-native-example
