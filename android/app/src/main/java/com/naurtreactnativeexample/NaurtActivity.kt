@@ -7,10 +7,15 @@ import androidx.databinding.ObservableField
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-
+import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
 import com.naurt_kotlin_sdk.*
 
+
 class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+
+    override fun getName(): String {
+        return "NaurtSDK"
+    }
 
     // ================================= Application Wide Variables ====================================
     private var hasInitialisedNaurt = false
@@ -27,14 +32,15 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
     )
 
-
-
-    override fun getName(): String {
-        return "NaurtSDK"
+    @ReactMethod
+    fun test(){
+        println("testinggggggggggssss")
     }
 
+
     @ReactMethod
-    internal fun initialiseNaurt(apiKey: String, precision:Int) {
+    fun initialiseNaurt(apiKey: String, precision:Int) {
+        println("IT GOT HEREEEEEEE")
         // Guarded return, to prevent duplicate Initialisations
         if (hasInitialisedNaurt) {
             return
@@ -58,13 +64,14 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
 
             if (location != null) {
                 println("New Naurt Point! [${location.latitude}, ${location.longitude}] at time: ${location.timestamp}")
+                sendEvent(reactApplicationContext, location)
             }
         }
     }
 
     /** Resume the Naurt Engine with a given context*/
     @ReactMethod
-    internal fun resumeNaurt(context: Context, savedInstanceState: Bundle?) {
+    fun resumeNaurt(context: Context, savedInstanceState: Bundle?) {
         // If we are resuming from a Bundled state, check for initialisation
         savedInstanceState?.let {
             hasInitialisedNaurt = savedInstanceState.getBoolean("initialised")
@@ -85,13 +92,19 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
 
     /** Pause the Naurt Engine */
     @ReactMethod
-    internal fun pauseNaurt(outState: Bundle) {
+    fun pauseNaurt(outState: Bundle) {
         if (hasInitialisedNaurt) {
             Naurt.pause()
             Naurt.naurtPoint.removeOnPropertyChanged(naurtCallback!!)
             hadPaused = true
             outState.putBoolean("hasInitialisedNaurt", hasInitialisedNaurt)
         }
+    }
+
+    private fun sendEvent(reactContext: ReactApplicationContext, message: NaurtLocation){
+        reactContext
+                .getJSModule(RCTDeviceEventEmitter::class.java)
+                .emit("location", message)
     }
 
 
