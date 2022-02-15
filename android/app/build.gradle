@@ -1,4 +1,6 @@
 apply plugin: "com.android.application"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 import com.android.build.OutputFile
 
@@ -78,7 +80,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+        enableHermes: false,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -189,6 +191,26 @@ android {
 }
 
 dependencies {
+
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1"
+
+    // Kotlin/x + coroutines
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.databinding:databinding-runtime:7.1.0'
+    implementation "androidx.work:work-runtime-ktx:2.7.1"
+    implementation 'androidx.concurrent:concurrent-futures:1.1.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-native-mt'
+
+    // Core Functionality
+    implementation 'net.java.dev.jna:jna:5.10.0@aar'
+    implementation 'org.apache.commons:commons-compress:1.21'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7"
     implementation 'androidx.databinding:databinding-runtime:7.0.4'
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
     implementation fileTree(dir: "libs", include: ["*.aar"])
