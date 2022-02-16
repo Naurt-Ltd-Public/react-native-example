@@ -22,6 +22,8 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
     private var hadPaused = false
     private var naurtCallback: NaurtCallback? = null
     private var applicationContext: Context = reactContext.applicationContext;
+    private lateinit var key: String
+    private var precision1: Int = 0
     // ================================= Application Wide Variables ====================================
 
 
@@ -40,6 +42,8 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
 
     @ReactMethod
     fun initialiseNaurt(apiKey: String, precision:Int) {
+        key = apiKey
+        precision1 = precision
         println("IT GOT HEREEEEEEE")
         // Guarded return, to prevent duplicate Initialisations
         if (hasInitialisedNaurt) {
@@ -54,14 +58,31 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
         naurtCallback = createNaurtCallback()
 
         hasInitialisedNaurt = true
+
+
+    }
+
+    @ReactMethod
+    fun start(){
+        Thread.sleep(10_000)
+        println("IT CALLED THE START FUNCTION")
+        Naurt.start()
+        createNaurtCallback()
+    }
+
+    @ReactMethod
+    fun check(): Boolean {
+        println(initialised)
+        return initialised
     }
 
     /** Create a Naurt callback, used for observing changes in the Naurt Point */
-    @ReactMethod
     internal fun createNaurtCallback(): NaurtCallback {
+        println("waiting for something to happen")
         return { it: ObservableField<NaurtLocation> ->
             val location = it.get()
-
+            println(location)
+            println("why print here")
             if (location != null) {
                 println("New Naurt Point! [${location.latitude}, ${location.longitude}] at time: ${location.timestamp}")
                 sendEvent(reactApplicationContext, location)
