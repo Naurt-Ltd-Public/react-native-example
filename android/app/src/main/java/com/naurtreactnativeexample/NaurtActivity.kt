@@ -67,7 +67,8 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
         Thread.sleep(10_000)
         println("IT CALLED THE START FUNCTION")
         Naurt.start()
-        createNaurtCallback()
+        Thread.sleep(60_000)
+        println(Naurt.naurtPoints)
     }
 
     @ReactMethod
@@ -81,7 +82,7 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
         println("waiting for something to happen")
         return { it: ObservableField<NaurtLocation> ->
             val location = it.get()
-            println(location)
+            println("THIS IS A LOCATION $location")
             println("why print here")
             if (location != null) {
                 println("New Naurt Point! [${location.latitude}, ${location.longitude}] at time: ${location.timestamp}")
