@@ -61,6 +61,12 @@ class NaurtActivity(reactContext: ReactApplicationContext) : ReactContextBaseJav
     }
 
     @ReactMethod
+    fun stop(){
+        println("IT CALLED THE stop FUNCTION")
+        Naurt.stop()
+    }
+
+    @ReactMethod
     fun check(){
         println("------------------------------")
         println(Naurt.naurtPoints)
