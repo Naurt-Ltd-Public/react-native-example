@@ -10,6 +10,7 @@
 
 import React from 'react';
 import {
+  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -62,10 +63,17 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const NaurtComponent = Platform.select({
+    // ios: () => <></>,
+    android: () => require('NaurtAndroidComponent'),
+    default: () => undefined,
+  })();
+  
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
+      {/* <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
@@ -88,7 +96,8 @@ const App = () => {
           </Section>
           <LearnMoreLinks />
         </View>
-      </ScrollView>
+      </ScrollView> */}
+      <NaurtComponent />
     </SafeAreaView>
   );
 };

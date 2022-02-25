@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
-const { NaurtModule } = NativeModules;
+const { NaurtModule: NaurtAndroidModule } = NativeModules;
 
-interface NaurtInterface {
+interface NaurtAndroidInterface {
     getName(): String;
     getConstants(): Map<String, String>;
     initialiseNaurt(apiKey: String): void;
@@ -12,4 +12,4 @@ interface NaurtInterface {
     checkPermissions(): boolean;
 }
 
-export default NaurtModule as NaurtInterface;
+export default NaurtAndroidModule as NaurtAndroidInterface;
