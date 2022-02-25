@@ -25,5 +25,4 @@ public class NaurtPackage implements ReactPackage {
 
        return modules;
    }
-
 }

@@ -1,8 +1,8 @@
 import React from "react"
-import { NativeModules } from "react-native";
+import NaurtModule from "./NaurtModule"
 
 const NaurtComponent = () => {
-    const { NaurtModule } = NativeModules;
+    const naurtEventId = NaurtModule.getConstants();
 
     return (
         <></>
