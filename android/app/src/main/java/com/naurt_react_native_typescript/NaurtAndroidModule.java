@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class NaurtModule extends ReactContextBaseJavaModule {
-    NaurtModule(ReactApplicationContext context) {
+public class NaurtAndroidModule extends ReactContextBaseJavaModule {
+    NaurtAndroidModule(ReactApplicationContext context) {
         super(context);
     }
 
@@ -37,7 +37,7 @@ public class NaurtModule extends ReactContextBaseJavaModule {
     @NonNull
     @Override
     public String getName() {
-        return "NaurtModule";
+        return "NaurtAndroidModule";
     }
 
     // ================================= Application Wide Variables ====================================

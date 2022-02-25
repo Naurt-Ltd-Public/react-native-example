@@ -21,7 +21,7 @@ public class NaurtPackage implements ReactPackage {
            ReactApplicationContext reactContext) {
        List<NativeModule> modules = new ArrayList<>();
 
-       modules.add(new NaurtModule(reactContext));
+       modules.add(new NaurtAndroidModule(reactContext));
 
        return modules;
    }
