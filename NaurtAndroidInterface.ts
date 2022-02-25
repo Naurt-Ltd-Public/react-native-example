@@ -6,5 +6,5 @@ export interface NaurtAndroidInterface {
     pauseNaurt(): void;
     startNaurt(callback: (eventId: number, latitude: number, longitude: number, timestamp: number) => void): void;
     stopNaurt(): void;
-    checkPermissions(): boolean;
+    isNaurtInitialised(): boolean;
 }

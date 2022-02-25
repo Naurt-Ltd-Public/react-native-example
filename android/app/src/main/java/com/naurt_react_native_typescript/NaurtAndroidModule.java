@@ -1,15 +1,10 @@
 package com.naurt_react_native_typescript;
 
-import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
 
-import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
@@ -18,14 +13,11 @@ import com.naurt_kotlin_sdk.Naurt;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class NaurtAndroidModule extends ReactContextBaseJavaModule {
     NaurtAndroidModule(ReactApplicationContext context) {
         super(context);
     }
-
-    public String[] permissions = new String[] {"ACCESS_FINE_LOCATION", "ACCESS_NETWORK_STATE", "WRITE_EXTERNAL_STORAGE"};
 
     @Override
     public Map<String, Object> getConstants() {
@@ -40,27 +32,32 @@ public class NaurtAndroidModule extends ReactContextBaseJavaModule {
         return "NaurtAndroidModule";
     }
 
-    // ================================= Application Wide Variables ====================================
+    // ================================= Application Wide Variables
+    // ====================================
     protected boolean hadPaused = false;
     protected NaurtCallback naurtCallback = null;
-    // ================================= Application Wide Variables ====================================
+    // ================================= Application Wide Variables
+    // ====================================
 
     /** Initialise Naurt with a given context */
     @ReactMethod
+    // Naurt INSTANCE is not null in here; only null when returning to JS
+    // Seems like Observables need to have @React wrappers
     public void initialiseNaurt(String apiKey) {
+        Log.i("NaurtAndroidModule", "INITIALISING NAURT: [" + Naurt.INSTANCE.isInitialised().get() + "]");
+
         // Guarded return, to prevent duplicate Initialisations
         if (Naurt.INSTANCE.isInitialised().get()) {
             return;
         }
 
         Naurt.INSTANCE.initialise(
-            apiKey,
-            getReactApplicationContext().getApplicationContext(),
-            6
-        );
+                apiKey,
+                getReactApplicationContext().getApplicationContext(),
+                6);
     }
 
-    /** Resume the Naurt Engine with a given context*/
+    /** Resume the Naurt Engine with a given context */
     @ReactMethod
     public void resumeNaurt() {
         if (Naurt.INSTANCE.isInitialised().get()) {
@@ -107,35 +104,9 @@ public class NaurtAndroidModule extends ReactContextBaseJavaModule {
         }
     }
 
-    /** Check to see if the given context has been granted all permissions in the input array */
+    /** Check if Naurt is initialised */
     @ReactMethod
-    public boolean checkPermissions() {
-        // Check each permission, requesting if needed
-        for (String permission : permissions) {
-            if (ActivityCompat.checkSelfPermission(
-                    getReactApplicationContext().getApplicationContext(),
-                    permission
-            ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                ActivityCompat.requestPermissions(
-                        Objects.requireNonNull(getReactApplicationContext().getCurrentActivity()),
-                        permissions,
-                        2935
-                );
-            }
-        }
-
-        // Check after request
-        for (String permission : permissions) {
-            if (ActivityCompat.checkSelfPermission(
-                    getReactApplicationContext().getApplicationContext(),
-                    permission
-            ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                return false;
-            }
-        }
-
-        return true;
+    public boolean isNaurtInitialised() {
+        return Naurt.INSTANCE.isInitialised().get();
     }
 }
