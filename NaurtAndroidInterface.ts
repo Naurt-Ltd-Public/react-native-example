@@ -7,7 +7,7 @@ export interface NaurtAndroidInterface {
     startNaurt(): void;
     stopNaurt(): void;
     isNaurtInitialised(): boolean;
-    addListener(eventName: String, handler: any): void;
+    addListener(eventName: String): void;
     removeListeners(count: number): void;
 }
 

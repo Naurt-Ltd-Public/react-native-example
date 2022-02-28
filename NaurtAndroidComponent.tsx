@@ -23,7 +23,6 @@ const NaurtAndroidComponent = () => {
   let naurtEventEmitter: NativeEventEmitter;
 
   const [naurtDisplay, setNaurtDisplay] = useState(<></>);
-  const [naurtPos, setNaurtPos] = useState([NaN, NaN, NaN]);
   //   const [hasPermission, setHasPermission] = useState(false);
 
   const [naurtIsInitialised, setNaurtIsInitialised] = useState(false);
@@ -39,7 +38,7 @@ const NaurtAndroidComponent = () => {
 
   useEffect(() => {
     const naurtAndroidConstants = NaurtAndroidModule.getConstants();
-    naurtEventEmitter = new NativeEventEmitter(NaurtAndroidModule as any);
+    naurtEventEmitter = new NativeEventEmitter(NaurtAndroidModule);
 
     console.log(naurtAndroidConstants);
 
@@ -57,7 +56,7 @@ const NaurtAndroidComponent = () => {
         console.log('Permissions: ' + granted);
 
         if (granted) {
-          NaurtAndroidModule.addListener(
+          naurtEventEmitter.addListener(
             'NAURT_IS_INITIALISED',
             (event: NaurtInisialiedEvent) => {
               console.log('NAURT_IS_INITIALISED: ' + event.isInitialised);
@@ -65,15 +64,20 @@ const NaurtAndroidComponent = () => {
             },
           );
 
-          NaurtAndroidModule.addListener(
+          naurtEventEmitter.addListener(
             'NAURT_IS_VALIDATED',
             (event: NaurtValidatedEvent) => {
               console.log('NAURT_IS_VALIDATED: ' + event.isValidated);
               setNaurtIsValidated(event.isValidated);
+
+              if (!naurtIsRunning) {
+                // Simple Start here, post initialisation
+                NaurtAndroidModule.startNaurt();
+              }
             },
           );
 
-          NaurtAndroidModule.addListener(
+          naurtEventEmitter.addListener(
             'NAURT_IS_RUNNING',
             (event: NaurtRunningEvent) => {
               console.log('NAURT_IS_RUNNING: ' + event.isRunning);
@@ -81,7 +85,7 @@ const NaurtAndroidComponent = () => {
             },
           );
 
-          NaurtAndroidModule.addListener(
+          naurtEventEmitter.addListener(
             'NAURT_NEW_POINT',
             (event: NaurtPointEvent) => {
               console.log(
@@ -100,8 +104,10 @@ const NaurtAndroidComponent = () => {
             '4b4d91b4-db2f-4104-922d-e0c94d9fa472-3c0ecfd8-c29a-498f-8d81-8bc58b318698',
           );
 
-          // Simple Start here, post initialisation
-          NaurtAndroidModule.startNaurt();
+          if (!naurtIsRunning) {
+            // Simple Start here, post initialisation
+            NaurtAndroidModule.startNaurt();
+          }
         }
       })
       .catch(err => {
@@ -115,13 +121,17 @@ const NaurtAndroidComponent = () => {
 
   useEffect(() => {
     setNaurtDisplay(
-      <Text>{`${naurtPos[0]}: Lat: ${naurtPos[1]}, Lon: ${naurtPos[2]}`}</Text>,
+      <Text>{`${naurtPoint.timestamp}: Lat: ${naurtPoint.latitude}, Lon: ${naurtPoint.longitude}`}</Text>,
     );
 
     return () => {
-      setNaurtPos([NaN, NaN, NaN]);
+      // setNaurtPoint({
+      //   latitude: 0.0,
+      //   longitude: 0.0,
+      //   timestamp: '',
+      // } as NaurtPoint);
     };
-  }, [naurtPos]);
+  }, [naurtPoint]);
 
   return (
     <View
