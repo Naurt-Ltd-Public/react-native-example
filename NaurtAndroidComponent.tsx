@@ -124,13 +124,7 @@ const NaurtAndroidComponent = () => {
       <Text>{`${naurtPoint.timestamp}: Lat: ${naurtPoint.latitude}, Lon: ${naurtPoint.longitude}`}</Text>,
     );
 
-    return () => {
-      // setNaurtPoint({
-      //   latitude: 0.0,
-      //   longitude: 0.0,
-      //   timestamp: '',
-      // } as NaurtPoint);
-    };
+    return () => {};
   }, [naurtPoint]);
 
   return (
