@@ -4,7 +4,33 @@ export interface NaurtAndroidInterface {
     initialiseNaurt(apiKey: String): void;
     resumeNaurt(): void;
     pauseNaurt(): void;
-    startNaurt(callback: (eventId: number, latitude: number, longitude: number, timestamp: number) => void): void;
+    startNaurt(): void;
     stopNaurt(): void;
     isNaurtInitialised(): boolean;
+    addListener(eventName: String, handler: any): void;
+    removeListeners(count: number): void;
+}
+
+export interface NaurtInisialiedEvent extends Event {
+    isInitialised: boolean
+}
+
+export interface NaurtValidatedEvent extends Event {
+    isValidated: boolean
+}
+
+export interface NaurtRunningEvent extends Event {
+    isRunning: boolean
+}
+
+export interface NaurtPointEvent extends Event {
+    latitude: number,
+    longitude: number,
+    timestamp: String
+}
+
+export interface NaurtPoint {
+    latitude: number,
+    longitude: number,
+    timestamp: String
 }
