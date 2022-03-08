@@ -7,7 +7,7 @@
 
 import Foundation
 import Naurt_SDK
-
+//Foobar
 @objc(RNNaurtIosModule)
 class RNNaurtIosModule: NSObject {
   @objc
