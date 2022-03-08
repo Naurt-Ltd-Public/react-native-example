@@ -10,6 +10,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B23ECB2A27D754B2000496F3 /* Naurt_SDK.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = B23ECB2927D754B2000496F3 /* Naurt_SDK.swiftmodule */; };
 		B23ECB2C27D754B8000496F3 /* libnaurtMerged.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B23ECB2B27D754B7000496F3 /* libnaurtMerged.a */; };
@@ -18,12 +19,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CFF6729AE0E9B05B9489EC5 /* Pods-naurt_react_native_typescript.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naurt_react_native_typescript.debug.xcconfig"; path = "Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* naurt_react_native_typescript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naurt_react_native_typescript.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = naurt_react_native_typescript/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = naurt_react_native_typescript/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = naurt_react_native_typescript/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = naurt_react_native_typescript/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = naurt_react_native_typescript/main.m; sourceTree = "<group>"; };
+		2DC433AEA677D805D9A4B227 /* Pods-naurt_react_native_typescript.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naurt_react_native_typescript.release.xcconfig"; path = "Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript.release.xcconfig"; sourceTree = "<group>"; };
+		4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-naurt_react_native_typescript.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = naurt_react_native_typescript/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B23ECB2927D754B2000496F3 /* Naurt_SDK.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Naurt_SDK.swiftmodule; sourceTree = "<group>"; };
 		B23ECB2B27D754B7000496F3 /* libnaurtMerged.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnaurtMerged.a; sourceTree = "<group>"; };
@@ -37,8 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23ECB2C27D754B8000496F3 /* libnaurtMerged.a in Frameworks */,
+				7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */,
 				B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */,
+				B23ECB2C27D754B8000496F3 /* libnaurtMerged.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 				B23ECB2B27D754B7000496F3 /* libnaurtMerged.a */,
 				B2B761B727D63B4A0076B7F9 /* libresolv.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,6 +90,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				E231AFDFC3E019BE3598F165 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -98,6 +105,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E231AFDFC3E019BE3598F165 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CFF6729AE0E9B05B9489EC5 /* Pods-naurt_react_native_typescript.debug.xcconfig */,
+				2DC433AEA677D805D9A4B227 /* Pods-naurt_react_native_typescript.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,11 +121,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "naurt_react_native_typescript" */;
 			buildPhases = (
+				53D650EEF5006CD2A3D3D440 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				B7260B19F7C423BC633F1A00 /* [CP] Embed Pods Frameworks */,
+				7BD11C6A1412CFE454021C5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +198,62 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		53D650EEF5006CD2A3D3D440 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-naurt_react_native_typescript-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BD11C6A1412CFE454021C5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7260B19F7C423BC633F1A00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +291,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CFF6729AE0E9B05B9489EC5 /* Pods-naurt_react_native_typescript.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -227,6 +303,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = naurt_react_native_typescript/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -235,9 +312,9 @@
 					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"$(inherited)",
-					"$(SRCROOT)",
+					"$(SRCROOT)/**",
 					"\"$(PROJECT_DIR)\"/**",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -253,6 +330,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DC433AEA677D805D9A4B227 /* Pods-naurt_react_native_typescript.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -263,6 +341,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = naurt_react_native_typescript/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +498,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

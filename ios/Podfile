@@ -12,10 +12,10 @@ target 'naurt_react_native_typescript' do
     :hermes_enabled => false
   )
 
-  target 'naurt_react_native_typescriptTests' do
-    inherit! :complete
-    # Pods for testing
-  end
+  # target 'naurt_react_native_typescriptTests' do
+  #   inherit! :complete
+  #   # Pods for testing
+  # end
 
   # Enables Flipper.
   #
