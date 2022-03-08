@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12D611A127D7690100B87AED /* naurtSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D611A027D7690100B87AED /* naurtSDK.a */; };
+		12D611BD27D76F3100B87AED /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 12D611B627D76F3100B87AED /* arm64-apple-ios.swiftdoc */; };
+		12D611BE27D76F3100B87AED /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 12D611B727D76F3100B87AED /* arm64.swiftmodule */; };
+		12D611BF27D76F3100B87AED /* arm64-apple-ios.swiftsourceinfo in Resources */ = {isa = PBXBuildFile; fileRef = 12D611B927D76F3100B87AED /* arm64-apple-ios.swiftsourceinfo */; };
+		12D611C027D76F3100B87AED /* arm64.swiftsourceinfo in Resources */ = {isa = PBXBuildFile; fileRef = 12D611BA27D76F3100B87AED /* arm64.swiftsourceinfo */; };
+		12D611C127D76F3100B87AED /* arm64-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 12D611BB27D76F3100B87AED /* arm64-apple-ios.swiftmodule */; };
+		12D611C227D76F3100B87AED /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 12D611BC27D76F3100B87AED /* arm64.swiftdoc */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B23ECB2A27D754B2000496F3 /* Naurt_SDK.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = B23ECB2927D754B2000496F3 /* Naurt_SDK.swiftmodule */; };
-		B23ECB2C27D754B8000496F3 /* libnaurtMerged.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B23ECB2B27D754B7000496F3 /* libnaurtMerged.a */; };
 		B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B761B727D63B4A0076B7F9 /* libresolv.tbd */; };
 		B2B761BC27D63CBC0076B7F9 /* RNNaurtIosModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B761BB27D63CBC0076B7F9 /* RNNaurtIosModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CFF6729AE0E9B05B9489EC5 /* Pods-naurt_react_native_typescript.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naurt_react_native_typescript.debug.xcconfig"; path = "Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript.debug.xcconfig"; sourceTree = "<group>"; };
+		12D611A027D7690100B87AED /* naurtSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = naurtSDK.a; sourceTree = "<group>"; };
+		12D611B627D76F3100B87AED /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
+		12D611B727D76F3100B87AED /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
+		12D611B927D76F3100B87AED /* arm64-apple-ios.swiftsourceinfo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftsourceinfo"; sourceTree = "<group>"; };
+		12D611BA27D76F3100B87AED /* arm64.swiftsourceinfo */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftsourceinfo; sourceTree = "<group>"; };
+		12D611BB27D76F3100B87AED /* arm64-apple-ios.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftmodule"; sourceTree = "<group>"; };
+		12D611BC27D76F3100B87AED /* arm64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftdoc; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* naurt_react_native_typescript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naurt_react_native_typescript.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = naurt_react_native_typescript/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = naurt_react_native_typescript/AppDelegate.m; sourceTree = "<group>"; };
@@ -29,8 +41,6 @@
 		2DC433AEA677D805D9A4B227 /* Pods-naurt_react_native_typescript.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naurt_react_native_typescript.release.xcconfig"; path = "Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript.release.xcconfig"; sourceTree = "<group>"; };
 		4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-naurt_react_native_typescript.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = naurt_react_native_typescript/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B23ECB2927D754B2000496F3 /* Naurt_SDK.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Naurt_SDK.swiftmodule; sourceTree = "<group>"; };
-		B23ECB2B27D754B7000496F3 /* libnaurtMerged.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnaurtMerged.a; sourceTree = "<group>"; };
 		B2B761B727D63B4A0076B7F9 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		B2B761BB27D63CBC0076B7F9 /* RNNaurtIosModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNNaurtIosModule.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -42,14 +52,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */,
+				12D611A127D7690100B87AED /* naurtSDK.a in Frameworks */,
 				B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */,
-				B23ECB2C27D754B8000496F3 /* libnaurtMerged.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12D611B527D76F3100B87AED /* Naurt_SDK.swiftmodule */ = {
+			isa = PBXGroup;
+			children = (
+				12D611B627D76F3100B87AED /* arm64-apple-ios.swiftdoc */,
+				12D611B727D76F3100B87AED /* arm64.swiftmodule */,
+				12D611B827D76F3100B87AED /* Project */,
+				12D611BB27D76F3100B87AED /* arm64-apple-ios.swiftmodule */,
+				12D611BC27D76F3100B87AED /* arm64.swiftdoc */,
+			);
+			path = Naurt_SDK.swiftmodule;
+			sourceTree = "<group>";
+		};
+		12D611B827D76F3100B87AED /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				12D611B927D76F3100B87AED /* arm64-apple-ios.swiftsourceinfo */,
+				12D611BA27D76F3100B87AED /* arm64.swiftsourceinfo */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* naurt_react_native_typescript */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +98,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B23ECB2B27D754B7000496F3 /* libnaurtMerged.a */,
 				B2B761B727D63B4A0076B7F9 /* libresolv.tbd */,
+				12D611A027D7690100B87AED /* naurtSDK.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */,
 			);
@@ -85,7 +116,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				B23ECB2927D754B2000496F3 /* Naurt_SDK.swiftmodule */,
+				12D611B527D76F3100B87AED /* Naurt_SDK.swiftmodule */,
 				13B07FAE1A68108700A75B9A /* naurt_react_native_typescript */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -135,6 +166,8 @@
 			dependencies = (
 			);
 			name = naurt_react_native_typescript;
+			packageProductDependencies = (
+			);
 			productName = naurt_react_native_typescript;
 			productReference = 13B07F961A680F5B00A75B9A /* naurt_react_native_typescript.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +194,8 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,9 +210,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23ECB2A27D754B2000496F3 /* Naurt_SDK.swiftmodule in Resources */,
+				12D611C127D76F3100B87AED /* arm64-apple-ios.swiftmodule in Resources */,
+				12D611C227D76F3100B87AED /* arm64.swiftdoc in Resources */,
+				12D611BE27D76F3100B87AED /* arm64.swiftmodule in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				12D611BD27D76F3100B87AED /* arm64-apple-ios.swiftdoc in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				12D611BF27D76F3100B87AED /* arm64-apple-ios.swiftsourceinfo in Resources */,
+				12D611C027D76F3100B87AED /* arm64.swiftsourceinfo in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +337,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
 					"$(SRCROOT)/**",
@@ -309,6 +349,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
 					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"$(inherited)",
@@ -316,14 +357,18 @@
 					"\"$(PROJECT_DIR)\"/**",
 					"$(PROJECT_DIR)/**",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = naurt_react_native_typescript;
+				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/YogaKit\" $(PROJECT_DIR)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -336,6 +381,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
 					"$(SRCROOT)/**",
@@ -347,20 +393,24 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
 					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"$(inherited)",
 					"$(SRCROOT)",
 					"\"$(PROJECT_DIR)\"/**",
-					"$(PROJECT_DIR)",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = naurt_react_native_typescript;
+				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/YogaKit\" $(PROJECT_DIR)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
