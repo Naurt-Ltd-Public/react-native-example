@@ -28,9 +28,3 @@ export interface NaurtPointEvent extends Event {
     longitude: number,
     timestamp: String
 }
-
-export interface NaurtPoint {
-    latitude: number,
-    longitude: number,
-    timestamp: String
-}

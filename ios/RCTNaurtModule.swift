@@ -9,8 +9,8 @@ import Foundation
 import Naurt_SDK
 
 
-@objc(RCTNaurtModue)
-class RCTNaurtModue: NSObject {
+@objc(RCTNaurtModule)
+class RCTNaurtModule: NSObject {
   @objc
   func initialiseNaurt(apiKey: String, precision: Int) {
     Naurt.shared.initialise(apiKey: apiKey, precision: precision);

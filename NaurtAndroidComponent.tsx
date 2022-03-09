@@ -11,11 +11,11 @@ import {NativeModules} from 'react-native';
 import {
   NaurtAndroidInterface,
   NaurtInisialiedEvent,
-  NaurtPoint,
   NaurtPointEvent,
   NaurtRunningEvent,
   NaurtValidatedEvent,
 } from './NaurtAndroidInterface';
+import { NaurtPoint } from './NaurtInterfaces';
 
 const NaurtAndroidComponent = () => {
   const NaurtAndroidModule =

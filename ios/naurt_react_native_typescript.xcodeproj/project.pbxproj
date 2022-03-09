@@ -20,8 +20,9 @@
 		7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B24835C327D8BFA100DC338D /* SWCompression in Frameworks */ = {isa = PBXBuildFile; productRef = B24835C227D8BFA100DC338D /* SWCompression */; };
+		B24835C827D8C4E000DC338D /* RCTNaurtModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24835C727D8C4E000DC338D /* RCTNaurtModule.swift */; };
+		B24835CB27D8C59D00DC338D /* RCTNaurtModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B24835CA27D8C59D00DC338D /* RCTNaurtModule.m */; };
 		B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B761B727D63B4A0076B7F9 /* libresolv.tbd */; };
-		B2B761BC27D63CBC0076B7F9 /* RNNaurtIosModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B761BB27D63CBC0076B7F9 /* RNNaurtIosModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +43,9 @@
 		2DC433AEA677D805D9A4B227 /* Pods-naurt_react_native_typescript.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naurt_react_native_typescript.release.xcconfig"; path = "Target Support Files/Pods-naurt_react_native_typescript/Pods-naurt_react_native_typescript.release.xcconfig"; sourceTree = "<group>"; };
 		4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-naurt_react_native_typescript.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = naurt_react_native_typescript/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B24835C727D8C4E000DC338D /* RCTNaurtModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTNaurtModule.swift; sourceTree = "<group>"; };
+		B24835CA27D8C59D00DC338D /* RCTNaurtModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTNaurtModule.m; sourceTree = "<group>"; };
 		B2B761B727D63B4A0076B7F9 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		B2B761BB27D63CBC0076B7F9 /* RNNaurtIosModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNNaurtIosModule.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -92,7 +94,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				B2B761BB27D63CBC0076B7F9 /* RNNaurtIosModule.swift */,
+				B24835C727D8C4E000DC338D /* RCTNaurtModule.swift */,
+				B24835CA27D8C59D00DC338D /* RCTNaurtModule.m */,
 			);
 			name = naurt_react_native_typescript;
 			sourceTree = "<group>";
@@ -324,9 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24835CB27D8C59D00DC338D /* RCTNaurtModule.m in Sources */,
+				B24835C827D8C4E000DC338D /* RCTNaurtModule.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				B2B761BC27D63CBC0076B7F9 /* RNNaurtIosModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +492,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -553,6 +558,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
