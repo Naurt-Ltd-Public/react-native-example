@@ -19,6 +19,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4757ACC90081D0420B330C14 /* libPods-naurt_react_native_typescript.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B24835C327D8BFA100DC338D /* SWCompression in Frameworks */ = {isa = PBXBuildFile; productRef = B24835C227D8BFA100DC338D /* SWCompression */; };
 		B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B761B727D63B4A0076B7F9 /* libresolv.tbd */; };
 		B2B761BC27D63CBC0076B7F9 /* RNNaurtIosModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B761BB27D63CBC0076B7F9 /* RNNaurtIosModule.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */,
+				B24835C327D8BFA100DC338D /* SWCompression in Frameworks */,
 				12D611A127D7690100B87AED /* naurtSDK.a in Frameworks */,
 				B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */,
 			);
@@ -167,6 +169,7 @@
 			);
 			name = naurt_react_native_typescript;
 			packageProductDependencies = (
+				B24835C227D8BFA100DC338D /* SWCompression */,
 			);
 			productName = naurt_react_native_typescript;
 			productReference = 13B07F961A680F5B00A75B9A /* naurt_react_native_typescript.app */;
@@ -195,6 +198,7 @@
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			packageReferences = (
+				B24835C127D8BFA100DC338D /* XCRemoteSwiftPackageReference "SWCompression" */,
 			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
@@ -575,6 +579,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B24835C127D8BFA100DC338D /* XCRemoteSwiftPackageReference "SWCompression" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tsolomko/SWCompression";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B24835C227D8BFA100DC338D /* SWCompression */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B24835C127D8BFA100DC338D /* XCRemoteSwiftPackageReference "SWCompression" */;
+			productName = SWCompression;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
