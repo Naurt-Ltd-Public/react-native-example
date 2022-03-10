@@ -16,7 +16,9 @@ import { NaurtPoint } from './NaurtInterfaces';
 const NaurtIosComponent = () => {
   const NaurtIosModule =
     NativeModules.RNNaurtIosModule as NaurtIosInterface;
-  let naurtEventEmitter: NativeEventEmitter;
+  // let naurtEventEmitter: NativeEventEmitter;
+
+  console.log("Naurt IOS: " + JSON.stringify(NativeModules))
 
   const [naurtDisplay, setNaurtDisplay] = useState(<></>);
   //   const [hasPermission, setHasPermission] = useState(false);

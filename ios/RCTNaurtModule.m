@@ -4,9 +4,8 @@
 //
 //  Created by Bob on 09/03/2022.
 //
-
-#import <Foundation/Foundation.h>
 #import "React/RCTBridgeModule.h"
 
 @interface RCT_EXTERN_MODULE(RCTNaurtModule, NSObject)
+  RCT_EXTERN_METHOD(initialiseNaurt:(String)apiKey (Int) precision);
 @end

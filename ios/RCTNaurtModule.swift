@@ -9,35 +9,28 @@ import Foundation
 import Naurt_SDK
 
 
-@objc(RCTNaurtModule)
-class RCTNaurtModule: NSObject {
-  @objc
-  static func requiresMainQueueSetup() -> Bool {
+@objc(RCTNaurtModule) open class RCTNaurtModule: NSObject {
+  @objc static func requiresMainQueueSetup() -> Bool {
     return true
   }
   
-  @objc
-  func initialiseNaurt(apiKey: String, precision: Int) {
+  @objc public func initialiseNaurt(apiKey: String, precision: Int) {
     Naurt.shared.initialise(apiKey: apiKey, precision: precision);
   }
   
-  @objc
-  func startNaurt() {
+  @objc public func startNaurt() {
     Naurt.shared.start()
   }
   
-  @objc
-  func stopNaurt() {
+  @objc public func stopNaurt() {
     Naurt.shared.stop()
   }
   
-  @objc
-  func pauseNaurt() {
+  @objc public func pauseNaurt() {
     Naurt.shared.pause()
   }
   
-  @objc
-  func resumeNaurt() {
+  @objc public func resumeNaurt() {
     Naurt.shared.resume()
   }
 }
