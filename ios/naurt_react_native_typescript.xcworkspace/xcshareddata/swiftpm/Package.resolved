@@ -14,9 +14,9 @@
         "package": "SWCompression",
         "repositoryURL": "https://github.com/tsolomko/SWCompression",
         "state": {
-          "branch": "develop",
-          "revision": "4ef8d551668709d4b87b4b00454ca8b2a46892ca",
-          "version": null
+          "branch": null,
+          "revision": "0ff80e30b6131df515601d698e007e18809431c5",
+          "version": "4.7.0"
         }
       }
     ]

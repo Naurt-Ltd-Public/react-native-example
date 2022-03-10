@@ -22,6 +22,8 @@
 		B24835C327D8BFA100DC338D /* SWCompression in Frameworks */ = {isa = PBXBuildFile; productRef = B24835C227D8BFA100DC338D /* SWCompression */; };
 		B24835CB27D8C59D00DC338D /* RCTNaurtModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B24835CA27D8C59D00DC338D /* RCTNaurtModule.m */; };
 		B2721E8027DA131400ACBEAE /* RCTNaurtModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2721E7F27DA131400ACBEAE /* RCTNaurtModule.swift */; };
+		B27D4D2D27DA912800FD521A /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = B27D4D2C27DA912800FD521A /* module.modulemap */; };
+		B27D4D3027DA968C00FD521A /* BitByteData in Frameworks */ = {isa = PBXBuildFile; productRef = B27D4D2F27DA968C00FD521A /* BitByteData */; };
 		B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B761B727D63B4A0076B7F9 /* libresolv.tbd */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,7 @@
 		B25EFC6C27DA560F00995ED3 /* Naurt_SDK-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Naurt_SDK-Swift.h"; sourceTree = "<group>"; };
 		B2721E7E27DA131400ACBEAE /* naurt_react_native_typescript-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "naurt_react_native_typescript-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2721E7F27DA131400ACBEAE /* RCTNaurtModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTNaurtModule.swift; sourceTree = "<group>"; };
+		B27D4D2C27DA912800FD521A /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		B2B761B727D63B4A0076B7F9 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27D4D3027DA968C00FD521A /* BitByteData in Frameworks */,
 				B2B761B827D63B4A0076B7F9 /* libresolv.tbd in Frameworks */,
 				12D611A127D7690100B87AED /* naurtSDK.a in Frameworks */,
 				7E55766A150D9B0796832921 /* libPods-naurt_react_native_typescript.a in Frameworks */,
@@ -100,6 +104,7 @@
 				B24835CA27D8C59D00DC338D /* RCTNaurtModule.m */,
 				B2721E7F27DA131400ACBEAE /* RCTNaurtModule.swift */,
 				B2721E7E27DA131400ACBEAE /* naurt_react_native_typescript-Bridging-Header.h */,
+				B27D4D2C27DA912800FD521A /* module.modulemap */,
 			);
 			name = naurt_react_native_typescript;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			name = naurt_react_native_typescript;
 			packageProductDependencies = (
 				B24835C227D8BFA100DC338D /* SWCompression */,
+				B27D4D2F27DA968C00FD521A /* BitByteData */,
 			);
 			productName = naurt_react_native_typescript;
 			productReference = 13B07F961A680F5B00A75B9A /* naurt_react_native_typescript.app */;
@@ -222,6 +228,7 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			packageReferences = (
 				B24835C127D8BFA100DC338D /* XCRemoteSwiftPackageReference "SWCompression" */,
+				B27D4D2E27DA968C00FD521A /* XCRemoteSwiftPackageReference "BitByteData" */,
 			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
@@ -351,6 +358,7 @@
 				B24835CB27D8C59D00DC338D /* RCTNaurtModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B27D4D2D27DA912800FD521A /* module.modulemap in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +403,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = naurt_react_native_typescript;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/YogaKit\" $(PROJECT_DIR)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/YogaKit\" $(PROJECT_DIR) $(SRCROOT)/include/naurt";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,8 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = naurt_react_native_typescript;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/YogaKit\" $(PROJECT_DIR)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/YogaKit\" $(PROJECT_DIR) $(SRCROOT)/include/naurt";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
@@ -513,7 +519,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECTDIR)/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -531,6 +537,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -581,7 +588,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECTDIR)/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -599,6 +606,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -631,8 +639,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tsolomko/SWCompression";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = exactVersion;
+				version = 4.7.0;
+			};
+		};
+		B27D4D2E27DA968C00FD521A /* XCRemoteSwiftPackageReference "BitByteData" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tsolomko/BitByteData";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -642,6 +658,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B24835C127D8BFA100DC338D /* XCRemoteSwiftPackageReference "SWCompression" */;
 			productName = SWCompression;
+		};
+		B27D4D2F27DA968C00FD521A /* BitByteData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B27D4D2E27DA968C00FD521A /* XCRemoteSwiftPackageReference "BitByteData" */;
+			productName = BitByteData;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
