@@ -118,7 +118,9 @@ const NaurtIosComponent = () => {
 
   useEffect(() => {
     setNaurtDisplay(
-      <Text>{`${naurtPoint.timestamp}: Lat: ${naurtPoint.latitude}, Lon: ${naurtPoint.longitude}`}</Text>,
+      <Text style={{
+        color: isDarkMode ? Colors.white : Colors.black,
+      }}>{`${naurtPoint.timestamp}: Lat: ${naurtPoint.latitude}, Lon: ${naurtPoint.longitude}`}</Text>,
     );
 
     return () => {};

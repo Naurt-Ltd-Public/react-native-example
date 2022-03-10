@@ -12,6 +12,11 @@ import Naurt_SDK
 @objc(RCTNaurtModule)
 class RCTNaurtModule: NSObject {
   @objc
+  static func requiresMainQueueSetup() -> Bool {
+    return true
+  }
+  
+  @objc
   func initialiseNaurt(apiKey: String, precision: Int) {
     Naurt.shared.initialise(apiKey: apiKey, precision: precision);
   }

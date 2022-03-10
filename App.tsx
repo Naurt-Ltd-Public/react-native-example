@@ -28,6 +28,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import NaurtAndroidComponent from './NaurtAndroidComponent';
+import NaurtIosComponent from './NaurtIosComponent';
 
 const Section: React.FC<{
   title: string;
@@ -74,6 +75,9 @@ const App = () => {
   
   if (Platform.OS === "android") {
     NaurtComponent = <NaurtAndroidComponent />
+  }
+  if (Platform.OS === "ios") {
+    NaurtComponent = <NaurtIosComponent/>
   }
 
   return (
