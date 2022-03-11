@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {NativeModules} from 'react-native';
+import { NativeModules } from 'react-native';
 import {
   NaurtIosInterface
 } from './NaurtIosInterface';
@@ -15,10 +15,10 @@ import { NaurtPoint } from './NaurtInterfaces';
 
 const NaurtIosComponent = () => {
   const NaurtIosModule =
-    NativeModules.RNNaurtIosModule as NaurtIosInterface;
+    NativeModules.RCTNaurtModule as NaurtIosInterface;
   // let naurtEventEmitter: NativeEventEmitter;
 
-  console.log("Naurt IOS: " + JSON.stringify(NativeModules))
+  console.log(NativeModules)
 
   const [naurtDisplay, setNaurtDisplay] = useState(<></>);
   //   const [hasPermission, setHasPermission] = useState(false);

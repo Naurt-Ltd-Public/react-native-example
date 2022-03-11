@@ -1,4 +1,0 @@
-module NaurtIosModule {
-    header "/include/naurt/Naurt_SDK-Swift.h"
-    export *
-}

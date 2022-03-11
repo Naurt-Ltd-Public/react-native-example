@@ -1,0 +1,4 @@
+module NaurtIosModule {
+    header "RCTNaurtModule.h"
+    export *
+}

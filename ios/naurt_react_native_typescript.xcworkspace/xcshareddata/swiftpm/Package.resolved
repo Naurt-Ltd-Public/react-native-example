@@ -2,21 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "BitByteData",
-        "repositoryURL": "https://github.com/tsolomko/BitByteData",
+        "package": "Zip",
+        "repositoryURL": "https://github.com/marmelroy/Zip",
         "state": {
-          "branch": null,
-          "revision": "c119e12decae8f56066df3345a4ac1a05b2f06d5",
-          "version": "2.0.1"
-        }
-      },
-      {
-        "package": "SWCompression",
-        "repositoryURL": "https://github.com/tsolomko/SWCompression",
-        "state": {
-          "branch": null,
-          "revision": "0ff80e30b6131df515601d698e007e18809431c5",
-          "version": "4.7.0"
+          "branch": "master",
+          "revision": "67fa55813b9e7b3b9acee9c0ae501def28746d76",
+          "version": null
         }
       }
     ]
